@@ -442,6 +442,7 @@ body {
     min-width: 231px;
     margin-right: 70px;
 }
+
 /* Приєднуйся */
 .join-in-title {
     color: var(--white-color);
@@ -479,10 +480,9 @@ body {
 .join-in {
     margin-right: 93px;
 }
-/* Підпишись */
 
-.subscribe-lable {
-    display: block;
+/* Підпишись */
+.subscribe-text {
     margin-bottom: 20px;
 
     font-weight: 700;
@@ -491,7 +491,7 @@ body {
     text-transform: uppercase;
     color: var(--white-color);
 }
-.subscribe-container {
+.subscribe-form {
     display: flex;
     gap: 12px;
 }
@@ -687,7 +687,7 @@ body {
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 }
-.modal-btn {
+.modal-btn-close {
     position: absolute;
     top: 8px;
     right: 8px;
@@ -705,6 +705,14 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.1);
 
     cursor: pointer;
+}
+.modal-btn-close .icon {
+    fill: var(--black-color);
+    transition: fill var(--anim-speed);
+}
+.modal-btn-close:hover .icon,
+.modal-btn-close:focus .icon {
+    fill: var(--accent-color);
 }
 .form-heading {
     margin: 0;
@@ -761,7 +769,7 @@ body {
     width: 18px;
     height: 18px;
 
-    fill: black;
+    fill: var(--black-color);
     transition: fill var(--anim-speed);
 
     pointer-events: none;
@@ -796,14 +804,13 @@ body {
 
     color: rgba(117, 117, 117, 0.5);
 }
-.form-field-checkbox {
-    margin-bottom: 30px;
-}
+
 .terms-label {
-    cursor: pointer;
+    margin-bottom: 30px;
+
     display: flex;
     align-items: center;
-    padding-left: 12px;
+    justify-content: center;
     user-select: none;
 }
 .agreement-text {
